@@ -7,3 +7,5 @@ C:\Users\HP\Documents\Visual Studio 2010\Projects\06Aufholkurs\06Aufholkurs\obj\
 C:\Users\HP\Documents\Visual Studio 2010\Projects\06Aufholkurs\06Aufholkurs\bin\Debug\06Aufholkurs.exe
 C:\Users\HP\Documents\Visual Studio 2010\Projects\06Aufholkurs\06Aufholkurs\bin\Debug\06Aufholkurs.pdb
 C:\Users\HP\Documents\Visual Studio 2010\Projects\06Aufholkurs\06Aufholkurs\obj\x86\Debug\06Aufholkurs.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\damespiel\06Aufholkurs\06Aufholkurs\obj\x86\Debug\06Aufholkurs.exe
+C:\Users\HP\Desktop\damespiel\06Aufholkurs\06Aufholkurs\obj\x86\Debug\06Aufholkurs.pdb

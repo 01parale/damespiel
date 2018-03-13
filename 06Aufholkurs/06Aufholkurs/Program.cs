@@ -10,7 +10,7 @@ namespace _06Aufholkurs
         static void Main(string[] args)
         {
             Console.SetCursorPosition(6, 2);
-            Console.Write("12345678");
+            Console.Write("12345678");              //8x8 feld
             for (int x = 0; x < 10; x++)
             {
                 for (int y = 0; y < 10; y++)
