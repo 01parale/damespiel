@@ -59,7 +59,6 @@ namespace _06Aufholkurs
                         Console.SetCursorPosition(1, 1);
                         Console.WriteLine("      ");
                         fressen(eingabep, eingabep2);
-                        //kontrolle3(eingabep, eingabep2);
                     }
                     else
                     {
@@ -188,7 +187,7 @@ namespace _06Aufholkurs
                 feld[eingabepn, eingabepn2] = 0;
                 Console.Write(spieler3);
         }
-        static void fressen(int x, int y)//Beim fressen wird das z.B feld[2,6] auf 0 gesetzt jedoch bleibt das X  dort stehen...jedoch wenn man von diesem punkt aus den stein X verschieben möchte bleibt der stein erhalten und es wird nur ein nuer stein erzeugt! 
+        static void fressen(int x, int y)//Beim fressen wird das z.B feld[2,6] auf 0 gesetzt jedoch bleibt das X  dort stehen...jedoch wenn man von diesem punkt aus den stein X verschieben möchte bleibt der stein erhalten und es wird nur ein nuer stein erzeugt! Hingegen eine überschreibung ist möglich!
         {
             //if(feld[eingabep, eingabep2] == 1 && feld[eingabep + 1, eingabep2 + 1] == 1)
 
