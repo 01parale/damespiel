@@ -38,6 +38,8 @@ namespace _06Aufholkurs
             createSpieler2();
 
             //Game is ready
+            Console.SetCursorPosition(1, 1);
+            Console.Write("Spieler_X beginnt!");
             while (true)
             {
                 Console.SetCursorPosition(1, 16);
@@ -57,30 +59,22 @@ namespace _06Aufholkurs
                         clear(eingabeX, eingabeY);
                         //Clear Fehler-Anzeige
                         Console.SetCursorPosition(1, 1);
-                        Console.WriteLine("      ");
+                        Console.WriteLine("                 ");
                     }
                     else if ((eingabeX + 2 == eingabeXnew && eingabeY + 2 == eingabeYnew || eingabeX + 2 == eingabeXnew && eingabeY - 2 == eingabeYnew || eingabeX - 2 == eingabeXnew && eingabeY + 2 == eingabeYnew || eingabeX - 2 == eingabeXnew && eingabeY - 2 == eingabeYnew) && (feld[eingabeX + 1, eingabeY + 1] != 0 || feld[eingabeX + 1, eingabeY - 1] != 0 || feld[eingabeX - 1, eingabeY + 1] != 0 || feld[eingabeX - 1, eingabeY - 1] != 0))
                     {                                                                                                                                                                                                                                                    //im int array alles auf 0 so kann man mit 0 nicht abfragen!                                                           
                         print(eingabeXnew, eingabeYnew, (spieler1_ist_dran ? symbol1 : symbol2));
                         clear(eingabeX, eingabeY);
-                        if (eingabeX > eingabeXnew && eingabeY > eingabeYnew)
-                            clear(eingabeX - 1, eingabeY - 1);
-                        else if (eingabeX > eingabeXnew && eingabeY < eingabeYnew)
-                            clear(eingabeX - 1, eingabeY + 1);
-                        else if (eingabeX < eingabeXnew && eingabeY > eingabeYnew)
-                            clear(eingabeX + 1, eingabeY - 1);
-                        else if (eingabeX < eingabeXnew && eingabeY < eingabeYnew)
-                            clear(eingabeX + 1, eingabeY + 1);
-
+                        fressen(eingabeX, eingabeY, eingabeXnew, eingabeYnew);
                         //Clear Fehler-Anzeige
                         Console.SetCursorPosition(1, 1);
-                        Console.WriteLine("      ");
-                    }
+                        Console.WriteLine("       ");
+                    }                      
                     else
                     {
                         //Fehler-Anzeige
                         Console.SetCursorPosition(1, 1);
-                        Console.WriteLine("Fehler");
+                        Console.WriteLine("Fehler!           ");
                         continue;
                     }
                 }
@@ -88,7 +82,7 @@ namespace _06Aufholkurs
                 {
                     //Fehler-Anzeige
                     Console.SetCursorPosition(1, 1);
-                    Console.WriteLine("Fehler");
+                    Console.WriteLine("Fehler!           ");
                     continue;
                 }
                 //invertiere spieler der dran ist
@@ -191,6 +185,18 @@ namespace _06Aufholkurs
             Console.SetCursorPosition(x + 5, y + 3);
             feld[x, y] = 0;
             Console.Write(" ");
+        }
+
+        static void fressen(int x, int y, int xnew, int ynew) //nach fressen muss noch verändert werden! dh so das dann nicht gleich gefressen werden kann...
+        {
+            if (x > xnew && y > ynew)
+                clear(x - 1, y - 1);
+            else if (x > xnew && y < ynew)
+                clear(x - 1, y + 1);
+            else if (x < xnew && y > ynew)
+                clear(x + 1, y - 1);
+            else if (x < xnew && y < ynew)
+                clear(x + 1, y + 1);  
         }
     }
 }
