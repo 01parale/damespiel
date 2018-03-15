@@ -18,6 +18,13 @@ namespace _06Aufholkurs
             //Prepare game
             Console.SetCursorPosition(6, 2);
             Console.Write("12345678");              //8x8 feld
+            Console.SetCursorPosition(0, 4);
+            int a = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                a++;
+                Console.WriteLine(a);
+            }
             for (int x = 0; x < 10; x++)
             {
                 for (int y = 0; y < 10; y++)
@@ -173,8 +180,8 @@ namespace _06Aufholkurs
             Console.Write(symbol2);
         }
 
-        static void print(int x, int y, string symbol)
-        {
+        static void print(int x, int y, string symbol) //veränderungn der abfrage bzw erweiterung durch frage auf 3/4 dies würed nur bei einem stein erscheinen der...
+        {                                              //schon einen anderen stein gefressen hat...dadurch würde ihn ein normales stein nicht mehr fressen können...
             Console.SetCursorPosition(x + 5, y + 3);
             Console.Write(symbol);
             feld[x, y] = (symbol == symbol1 ? 1 : 2);
